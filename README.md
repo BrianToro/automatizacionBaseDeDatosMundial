@@ -1,4 +1,4 @@
-#Automatizacion Mundial XI - 8
+# Automatizacion Mundial XI - 8
 Este programa hecho en python automatiza la subida
 de registros de jugadores y equipos en la base de datos
 de ejemplo en concreto las tablas de jugadores y la de
@@ -6,7 +6,7 @@ equipos basada en el mundial del 2018 <br/>
 
 numero total de equipos que se registran: 32 <br/>
 numero total de jugadores que se registran: 352
-##Instrucciones:
+## Instrucciones:
 * Primero necesitas descargar unas dependencias de python
 con el siguiente comando:
 `pip install pymysql`
