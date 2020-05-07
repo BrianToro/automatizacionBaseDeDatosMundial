@@ -51,21 +51,18 @@ class Database:
             raise
 
 database = Database()
-#database.select_sede()
-#database.select_equipo("Panama")
 
 def obtener_equipos(url, database):
     response = requests.get(url)
     if response.status_code == 200:
         response_json = response.json()
         for i in range(len(response_json)):
-            #print(response_json[i])
             id_equipo = response_json[i]['id']
             nombre_equipo = response_json[i]['country']
             grupo = response_json[i]['group_letter']
             database.insertar_equipos(id_equipo, nombre_equipo, grupo)
 
-def traer_todo(url, database):
+def obtener_jugadores(url, database):
     countrys = []
     response = requests.get(url)
     if response.status_code == 200:
@@ -88,5 +85,5 @@ def traer_todo(url, database):
     else:
         print('Error con el API')
 
-#obtener_equipos(URL_EQUIPOS, database)
-traer_todo(URL_JUGADORES, database)
+obtener_equipos(URL_EQUIPOS, database)
+obtener_jugadores(URL_JUGADORES, database)
